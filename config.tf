@@ -5,12 +5,12 @@ terraform {
       version = "~> 3.0"
     }
   }
-  backend "s3" {
-    bucket         = "sixth-dev-tf-backend"
-    key            = "env/dev/s3.tfstate"
-    region         = "eu-west-1"
-    dynamodb_table = "dev-s3-config-statelock"
-  }
+  # backend "s3" {
+  #   bucket         = "sixth-dev-tf-backend"
+  #   key            = "env/dev/s3.tfstate"
+  #   region         = "eu-west-1"
+  #   dynamodb_table = "dev-s3-config-statelock"
+  # }
 
 }
 # the partion key name of the DynamoDB should be LockID
